@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DeityTradePro — Early Access</title>
+  <meta name="description" content="DeityTradePro: Whale signals, hedge intelligence, and AI market radar. Limited early-bird access." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+  <!-- QRCode library (for printable QR) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <!-- Top urgency bar -->
+  <div class="bar">
+    <span>⚡ Early Access Ends In:</span>
+    <span id="countdown">00d : 00h : 00m : 00s</span>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="logo" src="assets/img/logo.png" alt="DeityTradePro" onerror="this.style.display='none'">
+      <h1>DeityTradePro</h1>
+      <p class="tagline">Whale Signals • Hedge Intelligence • AI Market Radar</p>
+
+      <div class="pill">
+        <span id="spots-left">50</span> spots left at <b>$59</b> (GodMode)
+      </div>
+
+      <a id="cta" class="btn" href="#" target="_blank" rel="noopener">Join Now</a>
+      <p class="sub">No fluff. Real signals. Limited early-bird access.</p>
+    </div>
+    <div class="badges">
+      <div>🛡 Contract-agnostic alerts</div>
+      <div>🐋 Whale wallet tracking</div>
+      <div>🧠 AI signal confidence</div>
+      <div>📈 Hedge & risk drops</div>
+    </div>
+  </header>
+
+  <!-- Feature strip -->
+  <section class="features">
+    <div class="grid">
+      <div class="card">
+        <h3>Whale Watch</h3>
+        <p>Real-time moves across BTC, ETH, XRP & stables. Tiered visibility for serious traders.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Signals</h3>
+        <p>Actionable entries with confidence scores, invalidation, and take-profit ladders.</p>
+      </div>
+      <div class="card">
+        <h3>Hedge Intel</h3>
+        <p>Adaptive risk alerts tuned to volatility + whale flows to protect gains.</p>
+      </div>
+      <div class="card">
+        <h3>Meme Radar</h3>
+        <p>Multi-chain new pair detection, social hype scoring & whale snipes. (Launching soon)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Tap <b>Join Now</b> to enter the Telegram.</li>
+      <li>Choose your tier in-bot (Free / Alpha / GodMode).</li>
+      <li>Get signals, hedge plans, & whale alerts 24/7.</li>
+    </ol>
+  </section>
+
+  <!-- QR block (for print/merch) -->
+  <section class="qr">
+    <h2>Scan to Join</h2>
+    <canvas id="qr"></canvas>
+    <p id="qr-url" class="muted"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <small>© <span id="year"></span> DeityTradePro. Not financial advice. Crypto is risky; do your own research.</small>
+  </footer>
+
+  <!-- Inline config you can edit without touching JS -->
+  <script>
+    window.DTP_CONFIG = {
+      telegramInvite: "https://t.me/your_invite_link_here",   // <- paste your Telegram invite link
+      earlyBirdCap: 50,                                       // first 50 only
+      earlyBirdPrice: 59,
+      // Countdown end (YYYY-MM-DDTHH:MM:SS in your local timezone)
+      countdownEndsAt: "2025-08-15T23:59:59",
+      // Render subdomain for QR (auto-uses telegramInvite if set)
+      qrTarget: "https://t.me/your_invite_link_here"
+    };
+  </script>
+</body>
+</html>
