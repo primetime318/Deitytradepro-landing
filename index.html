@@ -1,69 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DeityTradePro — Early Access</title>
-  <meta name="description" content="DeityTradePro: Whale signals, hedge intelligence, and AI market radar. Limited early-bird access." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/app.js"></script>
-  <!-- QRCode library (for printable QR) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DeityTradePro — Early Access</title>
+<meta name="description" content="DeityTradePro: Whale signals, hedge intelligence, AI market radar. Limited early access." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b10;--panel:#11131a;--muted:#a5adcb;--text:#e7e9f3;--accent:#8b5cf6;--accent2:#22c55e}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.bar{display:flex;gap:.75rem;justify-content:center;align-items:center;padding:.6rem 1rem;background:#161926;border-bottom:1px solid #1f2331;font-weight:600}
+#countdown{color:var(--accent2)}
+.hero{padding:5rem 1.25rem 2rem;background:radial-gradient(1200px 600px at 50% -100px, rgba(139,92,246,.25), transparent)}
+.hero-inner{max-width:960px;margin:0 auto;text-align:center}
+.logo{width:72px;height:72px;margin:0 auto 1rem;opacity:.9}
+h1{font-size:clamp(2rem,5vw,3rem);margin:.5rem 0}
+.tagline{color:var(--muted);margin:.25rem 0 1.25rem}
+.pill{display:inline-flex;gap:.5rem;align-items:center;border:1px solid #272a39;padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,.03);backdrop-filter:blur(6px);margin:0 0 1rem}
+.pill b{color:var(--accent2)}
+.btn{display:inline-block;margin-top:.25rem;background:linear-gradient(90deg,var(--accent),#6ee7b7);padding:.95rem 1.2rem;border-radius:12px;color:#0b0b10;font-weight:800;box-shadow:0 10px 30px rgba(139,92,246,.25)}
+.btn:hover{transform:translateY(-1px)}
+.sub{color:var(--muted);margin-top:.75rem}
+.badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;max-width:720px;margin:2rem auto 0}
+.badges>div{border:1px solid #272a39;background:var(--panel);padding:.7rem 1rem;border-radius:10px;color:#cfd5ef;opacity:.95}
+.features{padding:2rem 1.25rem}
+.grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{border:1px solid #272a39;background:var(--panel);padding:1.2rem;border-radius:14px}
+.card h3{margin:.2rem 0 .6rem}
+.how{padding:1rem 1.25rem 2rem;max-width:900px;margin:0 auto}
+.how h2{text-align:center;margin-bottom:.5rem}
+.how ol{max-width:560px;margin:.5rem auto 0;color:#cfd5ef}
+.how li{margin:.4rem 0}
+.qr{padding:1rem 1.25rem 3rem;text-align:center}
+#qr{background:#fff;border-radius:12px;padding:.75rem}
+.muted{color:var(--muted);margin-top:.5rem}
+.footer{border-top:1px solid #1f2331;padding:1.25rem;text-align:center;color:#98a2c7}
+@media (max-width:560px){.badges{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <!-- Top urgency bar -->
   <div class="bar">
     <span>⚡ Early Access Ends In:</span>
     <span id="countdown">00d : 00h : 00m : 00s</span>
   </div>
 
-  <!-- Hero -->
   <header class="hero">
     <div class="hero-inner">
-      <img class="logo" src="assets/img/logo.png" alt="DeityTradePro" onerror="this.style.display='none'">
       <h1>DeityTradePro</h1>
       <p class="tagline">Whale Signals • Hedge Intelligence • AI Market Radar</p>
-
-      <div class="pill">
-        <span id="spots-left">50</span> spots left at <b>$59</b> (GodMode)
-      </div>
-
+      <div class="pill"><span id="spots-left">50</span> spots left at <b>$59</b> (GodMode)</div>
       <a id="cta" class="btn" href="#" target="_blank" rel="noopener">Join Now</a>
       <p class="sub">No fluff. Real signals. Limited early-bird access.</p>
     </div>
     <div class="badges">
-      <div>🛡 Contract-agnostic alerts</div>
       <div>🐋 Whale wallet tracking</div>
       <div>🧠 AI signal confidence</div>
       <div>📈 Hedge & risk drops</div>
+      <div>🪙 Multi-coin payments</div>
     </div>
   </header>
 
-  <!-- Feature strip -->
   <section class="features">
     <div class="grid">
-      <div class="card">
-        <h3>Whale Watch</h3>
-        <p>Real-time moves across BTC, ETH, XRP & stables. Tiered visibility for serious traders.</p>
-      </div>
-      <div class="card">
-        <h3>Smart Signals</h3>
-        <p>Actionable entries with confidence scores, invalidation, and take-profit ladders.</p>
-      </div>
-      <div class="card">
-        <h3>Hedge Intel</h3>
-        <p>Adaptive risk alerts tuned to volatility + whale flows to protect gains.</p>
-      </div>
-      <div class="card">
-        <h3>Meme Radar</h3>
-        <p>Multi-chain new pair detection, social hype scoring & whale snipes. (Launching soon)</p>
-      </div>
+      <div class="card"><h3>Whale Watch</h3><p>Real-time moves across BTC, ETH, XRP & stables. Tiered visibility.</p></div>
+      <div class="card"><h3>Smart Signals</h3><p>Entries with confidence, invalidation & take-profit ladders.</p></div>
+      <div class="card"><h3>Hedge Intel</h3><p>Adaptive risk alerts tuned to volatility + whale flows.</p></div>
+      <div class="card"><h3>Meme Radar</h3><p>Multi-chain new-pair detection + social/whale scoring. (Soon)</p></div>
     </div>
   </section>
 
-  <!-- How it works -->
   <section class="how">
     <h2>How It Works</h2>
     <ol>
@@ -73,29 +80,52 @@
     </ol>
   </section>
 
-  <!-- QR block (for print/merch) -->
   <section class="qr">
     <h2>Scan to Join</h2>
     <canvas id="qr"></canvas>
     <p id="qr-url" class="muted"></p>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <small>© <span id="year"></span> DeityTradePro. Not financial advice. Crypto is risky; do your own research.</small>
   </footer>
 
-  <!-- Inline config you can edit without touching JS -->
+  <!-- Config: edit these 3 values only -->
   <script>
     window.DTP_CONFIG = {
-      telegramInvite: "https://t.me/your_invite_link_here",   // <- paste your Telegram invite link
-      earlyBirdCap: 50,                                       // first 50 only
-      earlyBirdPrice: 59,
-      // Countdown end (YYYY-MM-DDTHH:MM:SS in your local timezone)
-      countdownEndsAt: "2025-08-15T23:59:59",
-      // Render subdomain for QR (auto-uses telegramInvite if set)
-      qrTarget: "https://t.me/your_invite_link_here"
+      telegramInvite: "https://t.me/your_invite_link_here",  // <— paste your Telegram invite
+      earlyBirdCap: 50,
+      countdownEndsAt: "2025-08-15T23:59:59",                // YYYY-MM-DDTHH:MM:SS
+      qrTarget: "https://t.me/your_invite_link_here"         // QR destination
     };
+  </script>
+
+  <!-- QR code lib -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <!-- Minimal JS -->
+  <script>
+  (function(){
+    const cfg=window.DTP_CONFIG||{}, $c=document.getElementById('countdown'),
+          $s=document.getElementById('spots-left'), $cta=document.getElementById('cta'),
+          $qr=document.getElementById('qr'), $qru=document.getElementById('qr-url'),
+          yr=document.getElementById('year');
+    if(yr) yr.textContent=new Date().getFullYear();
+    const invite=cfg.telegramInvite||'#'; if($cta) $cta.href=invite;
+    const CAP=Number(cfg.earlyBirdCap||50), KEY='dtp_spots_seen';
+    let seen=Number(localStorage.getItem(KEY)||Math.floor(Math.random()*5));
+    seen=Math.min(Math.max(seen,0),CAP-1); const left=Math.max(1,CAP-seen);
+    if($s) $s.textContent=left; localStorage.setItem(KEY,String(seen+1));
+    function tick(){
+      const end=new Date(cfg.countdownEndsAt||new Date(Date.now()+3*24*3600e3));
+      const ms=end-Date.now(); if(ms<=0){ if($c) $c.textContent="00d : 00h : 00m : 00s"; return;}
+      const d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),
+            m=Math.floor(ms%3600000/60000),s=Math.floor(ms%60000/1000);
+      if($c) $c.textContent=`${String(d).padStart(2,'0')}d : ${String(h).padStart(2,'0')}h : ${String(m).padStart(2,'0')}m : ${String(s).padStart(2,'0')}s`;
+      requestAnimationFrame(tick);
+    } tick();
+    const target=cfg.qrTarget||invite;
+    if($qr && window.QRCode){ QRCode.toCanvas($qr,target,{width:220,margin:1},()=>{}); if($qru) $qru.textContent=target; }
+  })();
   </script>
 </body>
 </html>
